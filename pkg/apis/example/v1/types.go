@@ -13,7 +13,7 @@ type Foo struct {
 
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec FooSpec `json:"spec"`
+	Spec   FooSpec   `json:"spec"`
 	Status FooStatus `json:"status"`
 }
 
@@ -27,7 +27,6 @@ type FooSpec struct {
 type FooStatus struct {
 	AvailableReplicas int32 `json:"availableReplicas"`
 }
-
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
